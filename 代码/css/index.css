@@ -1,0 +1,21 @@
+h1 {
+    font-weight: 600;
+    margin-top: 10%;
+}
+
+#search {
+    margin-top: 50px;
+}
+
+.container-center {
+    overflow: visible;
+    max-width: 700px;
+}
+
+#show-public {
+    cursor: pointer;
+}
+
+#public-modal {
+    margin-top: 16em;
+}

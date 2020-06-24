@@ -1,0 +1,21 @@
+h1 {
+    font-weight: 600;
+}
+
+.container-center {
+    max-width: 405px;
+    padding-left: 3.5em;
+}
+
+#forget-pass {
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+    width: 304px;
+}
+
+.form-group {
+    width: 304px;
+}

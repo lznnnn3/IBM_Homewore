@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="header">
+        <!-- 先判断是否登录,再添加页头 -->
+    </div>
+
+    <div class="title">
+        <div class="bg"></div>
+        <h1>欢迎使用</h1>
+    </div>
+    <!-- 搜索框也可以放到vue里，可以考虑优化 -->
+    <div class="col-xs-12">
+        <form action="b_and_r/borrow.html" method="GET" id="search" class="container-center form-group">
+            <div class="input-group input-group-lg">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span id="search-type">书名</span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a id="select-name" class="pointer select-menu">书名</a></li>
+                        <li><a id="select-author" class="pointer select-menu">作者</a></li>
+                        <li><a id="select-cate" class="pointer select-menu">分类</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="type" id="hidden-type" class="form-control" value="name">
+                <input type="text" name="q" id="query" class="form-control" placeholder="搜索你想查询的图书、作者、分类">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="search-submit" type="submit" aria-label="go-search">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </span>
+            </div>
+        </form>
+
+        <div id="public-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">公告</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="public"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">我知道了</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.js"></script>
+    <script src="js/common_fns.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/vheader.js"></script>
+</body>
+</html>
